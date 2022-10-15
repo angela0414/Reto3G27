@@ -27,23 +27,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/Client")
 
 public class ClientController {
-    @Autowired
+     @Autowired
     private ClientService clientService;
     
     @GetMapping("/all")
-    public List<Client>getAll(){
+    public List<Client> getAll(){
         return clientService.getAll();
     }
     
-    @GetMapping("/{id}") 
+    @GetMapping("/{id}")
     public Optional<Client> getClient(@PathVariable("id") int id){
         return clientService.getClient(id);
-    }
+    } 
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Client save (@RequestBody Client client){
         return clientService.save(client);
     }
-
 }

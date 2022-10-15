@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @Table(name = "client")
 public class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)   
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
     private String email;
     private String password;
@@ -32,7 +32,7 @@ public class Client {
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
     @JsonIgnoreProperties("client")
     private List<Message> messages;
-    
+   
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
     @JsonIgnoreProperties("client")
     private List<Reservation> reservations;
@@ -92,8 +92,8 @@ public class Client {
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
-    
-    
+   
+   
     
     
 }

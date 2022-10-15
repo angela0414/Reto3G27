@@ -4,6 +4,7 @@
  */
 package com.example.demo.Controlador;
 
+
 import com.example.demo.Modelo.Reservation;
 import com.example.demo.Servicio.ReservationService;
 import java.util.List;
@@ -27,18 +28,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/Reservation")
 
 public class ReservationController {
-    @Autowired
+        @Autowired
     private ReservationService reservationService;
     
     @GetMapping("/all")
-    public List<Reservation>getAll(){
+    public List<Reservation> getAll(){
         return reservationService.getAll();
     }
     
-    @GetMapping("/{id}") 
+    @GetMapping("/{id}")
     public Optional<Reservation> getReservation(@PathVariable("id") int id){
         return reservationService.getReservation(id);
-    }
+    } 
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)

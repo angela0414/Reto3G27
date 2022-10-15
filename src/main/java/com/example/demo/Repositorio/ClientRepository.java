@@ -18,18 +18,18 @@ import com.example.demo.Modelo.Client;
 @Repository
 
 public class ClientRepository {
-    @Autowired
+     @Autowired
     private ClientInterface extencionesCrud;
     
     public List<Client> getAll (){
         return (List<Client>)extencionesCrud.findAll();
     }
-       
+    
     public Optional<Client> getClient(int id){
         return extencionesCrud.findById(id);
     }
- 
+    
     public Client save(Client client){
         return extencionesCrud.save(client);
-    }
+    }    
 }

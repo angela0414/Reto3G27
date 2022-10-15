@@ -25,11 +25,11 @@ public class SpecialtyRepository {
     public List<Specialty> getAll (){
         return (List<Specialty>)extencionesCrud.findAll();
     }
-       
+    
     public Optional<Specialty> getSpecialty(int id){
         return extencionesCrud.findById(id);
     }
- 
+    
     public Specialty save(Specialty specialty){
         return extencionesCrud.save(specialty);
     }

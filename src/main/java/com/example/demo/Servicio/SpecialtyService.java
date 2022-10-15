@@ -26,7 +26,7 @@ public class SpecialtyService {
     }
     
     public Optional<Specialty> getSpecialty(int id){
-        return specialtyRepository.getSpecialty(id);        
+        return specialtyRepository.getSpecialty(id);
     }
     
     public Specialty save (Specialty specialty){

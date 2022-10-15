@@ -25,22 +25,22 @@ import javax.persistence.Table;
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idReservation;
-    private Date startDate;
-    private Date devolutionDate;
-    private String status = "created";
-    
+     private Integer idReservation;
+     private Date startDate;
+     private Date devolutionDate;
+     private String status = "created";
+     
     @ManyToOne
     @JoinColumn(name = "doctorId")
     @JsonIgnoreProperties("reservations")
     private Doctor doctor;    
-
+    
     @ManyToOne
     @JoinColumn(name = "clientid")
     @JsonIgnoreProperties({"reservations","messages"})
-    private Client client;    
+    private Client client;
     
-    private String score;
+     private String score;
 
     public Integer getIdReservation() {
         return idReservation;
@@ -97,9 +97,9 @@ public class Reservation {
     public void setScore(String score) {
         this.score = score;
     }
-    
-    
-
+     
+       
+       
     
     
 }

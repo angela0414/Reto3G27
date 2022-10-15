@@ -35,11 +35,11 @@ public class Doctor {
     @JoinColumn(name = "specialtyId")
     @JsonIgnoreProperties("doctors")
     private Specialty specialty;
-        
+    
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "doctor")
     @JsonIgnoreProperties({"doctor","client"})
     private List<Message> message;
-    
+     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "doctor")
     @JsonIgnoreProperties({"doctor","message"})
     private List<Reservation> reservations;
@@ -107,9 +107,9 @@ public class Doctor {
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
-    
 
 
-    
+
+
     
 }

@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/Doctor")
 public class DoctorController {
-    @Autowired
+      @Autowired
     private DoctorService doctorService;
     
     @GetMapping("/all")
@@ -34,17 +34,17 @@ public class DoctorController {
         return doctorService.getAll();
     }
     
-    @GetMapping("/{id}") 
+    @GetMapping("/{id}")
     public Optional<Doctor> getDoctor(@PathVariable("id") int id){
         return doctorService.getdoctor(id);
-    }
+    } 
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Doctor save (@RequestBody Doctor doctor){
         return doctorService.save(doctor);
     }
-
+    
     
     
 }

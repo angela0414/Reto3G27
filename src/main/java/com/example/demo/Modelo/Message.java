@@ -21,20 +21,20 @@ import javax.persistence.Table;
 @Table(name = "message")
 
 public class Message {
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idMessage;
+     private Integer idMessage;
     private String  messageText;
 
     @ManyToOne
     @JoinColumn(name = "doctorId")
     @JsonIgnoreProperties({"messages","reservations"})
-    private Doctor doctor;    
-
+    private Doctor doctor;
+     
     @ManyToOne
     @JoinColumn(name = "clientid")
     @JsonIgnoreProperties({"messages","reservations"})
-    private Client client;    
+    private Client client;
 
     public Integer getIdMessage() {
         return idMessage;
@@ -67,7 +67,7 @@ public class Message {
     public void setClient(Client client) {
         this.client = client;
     }
-
+    
     
     
     

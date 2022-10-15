@@ -18,19 +18,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Repository
 
 public class DoctorRepository {
-    @Autowired
+     @Autowired
     private DoctorInterface extencionesCrud;
     
     public List<Doctor> getAll (){
         return (List<Doctor>)extencionesCrud.findAll();
     }
-       
+    
     public Optional<Doctor> getDoctor(int id){
         return extencionesCrud.findById(id);
     }
- 
+    
     public Doctor save(Doctor doctor){
         return extencionesCrud.save(doctor);
     }
-    
+
 }

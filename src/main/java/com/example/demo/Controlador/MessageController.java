@@ -4,6 +4,7 @@
  */
 package com.example.demo.Controlador;
 
+
 import com.example.demo.Modelo.Message;
 import com.example.demo.Servicio.MessageService;
 import java.util.List;
@@ -27,18 +28,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/Message")
 
 public class MessageController {
-    @Autowired
+      @Autowired
     private MessageService messageService;
     
     @GetMapping("/all")
-    public List<Message>getAll(){
+    public List<Message> getAll(){
         return messageService.getAll();
     }
     
-    @GetMapping("/{id}") 
+    @GetMapping("/{id}")
     public Optional<Message> getMessage(@PathVariable("id") int id){
         return messageService.getMessage(id);
-    }
+    } 
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)

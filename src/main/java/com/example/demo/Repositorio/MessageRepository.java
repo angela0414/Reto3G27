@@ -18,17 +18,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Repository
 
 public class MessageRepository {
-    @Autowired
+     @Autowired
     private MessageInterface extencionesCrud;
     
     public List<Message> getAll (){
         return (List<Message>)extencionesCrud.findAll();
     }
-       
+    
     public Optional<Message> getMessage(int id){
         return extencionesCrud.findById(id);
     }
- 
+    
     public Message save(Message message){
         return extencionesCrud.save(message);
     }

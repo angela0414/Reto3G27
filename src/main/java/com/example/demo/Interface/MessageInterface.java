@@ -11,7 +11,7 @@ import com.example.demo.Modelo.Message;
  * @author angela
  */
 public interface MessageInterface extends CrudRepository<Message, Integer> {
-    
+
     
     
 }

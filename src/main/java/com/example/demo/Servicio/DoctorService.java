@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Service
 
 public class DoctorService {
-    @Autowired
+      @Autowired
     private DoctorRepository doctorRepository;
     
     public List<Doctor> getAll(){
@@ -27,7 +27,7 @@ public class DoctorService {
     }
     
     public Optional<Doctor> getdoctor(int id){
-        return doctorRepository.getDoctor(id);        
+        return doctorRepository.getDoctor(id);
     }
     
     public Doctor save (Doctor doctor){

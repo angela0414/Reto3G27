@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ReservationService {
-    @Autowired
+       @Autowired
     private ReservationRepository reservationRepository;
     
     public List<Reservation> getAll(){
@@ -26,7 +26,7 @@ public class ReservationService {
     }
     
     public Optional<Reservation> getReservation(int id){
-        return reservationRepository.getReservation(id);        
+        return reservationRepository.getReservation(id);
     }
     
     public Reservation save (Reservation reservation){

@@ -23,15 +23,15 @@ import javax.persistence.Table;
 @Table(name = "specialty")
 
 public class Specialty {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Integer id;
-private String name;
-private String description;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String name;
+    private String description;
 
 @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "specialty")
-@JsonIgnoreProperties("specialty")
-private List<Doctor> doctors;
+    @JsonIgnoreProperties("specialty")
+    private List<Doctor> doctors;
 
     public Integer getId() {
         return id;
@@ -57,15 +57,15 @@ private List<Doctor> doctors;
         this.description = description;
     }
 
-    public List<Doctor> getDoctors() {
+    public List<Doctor> getDoctor() {
         return doctors;
     }
 
     public void setDoctors(List<Doctor> doctors) {
         this.doctors = doctors;
     }
-
-
-
+    
+    
+    
 
 }

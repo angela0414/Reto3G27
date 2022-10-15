@@ -31,19 +31,19 @@ public class SpecialtyController {
     private SpecialtyService specialtyService;
     
     @GetMapping("/all")
-    public List<Specialty>getAll(){
+    public List<Specialty> getAll(){
         return specialtyService.getAll();
     }
     
-    @GetMapping("/{id}") 
+    @GetMapping("/{id}")
     public Optional<Specialty> getSpecialty(@PathVariable("id") int id){
         return specialtyService.getSpecialty(id);
-    }
+    } 
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Specialty save (@RequestBody Specialty specialty){
         return specialtyService.save(specialty);
     }
-        
+    
 }

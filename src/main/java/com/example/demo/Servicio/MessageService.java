@@ -25,7 +25,7 @@ public class MessageService {
     }
     
     public Optional<Message> getMessage(int id){
-        return messageRepository.getMessage(id);        
+        return messageRepository.getMessage(id);
     }
     
     public Message save (Message message){
@@ -40,5 +40,5 @@ public class MessageService {
             }
             
         }
-    }    
+    }
 }

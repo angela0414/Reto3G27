@@ -4,12 +4,12 @@
  */
 package com.example.demo.Servicio;
 
-import com.example.demo.Modelo.Client;
 import com.example.demo.Repositorio.ClientRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.example.demo.Modelo.Client;
 /**
  *
  * @author angela
@@ -26,7 +26,7 @@ public class ClientService {
     }
     
     public Optional<Client> getClient(int id){
-        return clientRepository.getClient(id);        
+        return clientRepository.getClient(id);
     }
     
      public Client save (Client client){
