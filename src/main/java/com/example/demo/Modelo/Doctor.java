@@ -38,7 +38,7 @@ public class Doctor {
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "doctor")
     @JsonIgnoreProperties({"doctor","client"})
-    private List<Message> message;
+    private List<Message> messages;
      
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "doctor")
     @JsonIgnoreProperties({"doctor","message"})
@@ -92,12 +92,12 @@ public class Doctor {
         this.specialty = specialty;
     }
 
-    public List<Message> getMessage() {
-        return message;
+    public List<Message> getMessages() {
+        return messages;
     }
 
-    public void setMessage(List<Message> message) {
-        this.message = message;
+    public void setMessages(List<Message> messages) {
+        this.messages = messages;
     }
 
     public List<Reservation> getReservations() {
@@ -107,8 +107,8 @@ public class Doctor {
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
-
-
+    
+    
 
 
     
