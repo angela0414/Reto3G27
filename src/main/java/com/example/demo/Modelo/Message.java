@@ -32,7 +32,7 @@ public class Message {
     private Doctor doctor;
      
     @ManyToOne
-    @JoinColumn(name = "clientid")
+    @JoinColumn(name = "clientId")
     @JsonIgnoreProperties({"messages","reservations"})
     private Client client;
 
